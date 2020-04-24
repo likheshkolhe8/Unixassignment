@@ -4,7 +4,7 @@ function Hi(){
     abc=$(ls -l |grep "^-"|wc -l)
     while true;
     do
-        echo "Enter guess"
+        echo "Enter predicted number"
         read  number
         if [ $number -lt $abc ]
         then
