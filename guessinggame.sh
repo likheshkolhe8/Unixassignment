@@ -1,22 +1,22 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
-function guess(){
-    true_ans=$(ls -l |grep "^-"|wc -l)
+function Hi(){
+    abc=$(ls -l |grep "^-"|wc -l)
     while true;
     do
-        echo "pleas enter your guess"
+        echo "Enter guess"
         read  number
-        if [ $number -lt $true_ans ]
+        if [ $number -lt $abc ]
         then
-            echo "your guess is Less then the true number"
-        elif [ $number -gt $true_ans ]
+            echo " Less than number"
+        elif [ $number -gt $abc ]
         then
-            echo "your guess is Greater then the true number"
+            echo "Greater than number"
         else
-            echo " congratulation,you are right!"
+            echo " Correct answer"
         break;
         fi
     done
 }
-echo "guess the files number in the current directory!"
-guess
+echo "Recent directory"
+Hi
